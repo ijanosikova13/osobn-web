@@ -45,6 +45,16 @@ a {
 
 a {
   text-decoration: none;
+  color: #464feb;
+}
+
+tr th,
+tr td {
+  border: 1px solid #e6e6e6;
+}
+
+tr th {
+  background-color: #f5f5f5;
 }
 
 button {
@@ -57,7 +67,7 @@ button {
 }
 
 .container {
-  width: min(1120px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 80px));
   margin-inline: auto;
 }
 
@@ -84,6 +94,7 @@ button {
 
 .wordmark {
   gap: 9px;
+  color: var(--ink);
   font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 800;
@@ -108,6 +119,7 @@ button {
 
 .navigation-links {
   gap: 38px;
+  color: var(--ink);
   font-size: 13px;
   font-weight: 600;
 }
@@ -125,6 +137,7 @@ button {
   padding: 10px 17px;
   border: 1px solid var(--line);
   border-radius: 100px;
+  color: var(--ink);
   transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -144,11 +157,11 @@ button {
 
 .hero {
   display: grid;
-  min-height: 595px;
+  min-height: 680px;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 54px;
-  padding-block: 74px 82px;
+  gap: 76px;
+  padding-block: 100px 110px;
 }
 
 .eyebrow {
@@ -186,8 +199,8 @@ h3 {
 }
 
 .hero h1 {
-  margin-bottom: 20px;
-  font-size: clamp(42px, 5.3vw, 65px);
+  margin-bottom: 26px;
+  font-size: clamp(42px, 4.8vw, 61px);
   font-weight: 800;
   letter-spacing: -0.075em;
   line-height: 1.11;
@@ -213,11 +226,11 @@ h3 {
 }
 
 .hero-description {
-  max-width: 470px;
-  margin-bottom: 29px;
+  max-width: 550px;
+  margin-bottom: 35px;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.95;
 }
 
 .hero-actions {
@@ -396,7 +409,7 @@ h3 {
 }
 
 .section-pad {
-  padding-block: 100px;
+  padding-block: 124px;
 }
 
 .projects {
@@ -408,7 +421,7 @@ h3 {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 39px;
+  margin-bottom: 52px;
 }
 
 .section-heading .eyebrow {
@@ -447,7 +460,7 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 30px;
 }
 
 .project-card {
@@ -457,7 +470,7 @@ h3 {
 .project-art {
   position: relative;
   display: grid;
-  height: 263px;
+  height: 290px;
   overflow: hidden;
   place-items: center;
   border-radius: 14px;
@@ -772,6 +785,7 @@ h3 {
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 50%;
+  color: var(--ink);
   font-size: 14px;
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -791,7 +805,7 @@ h3 {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   align-items: center;
-  gap: 80px;
+  gap: 104px;
 }
 
 .about-decoration {
@@ -870,8 +884,8 @@ h3 {
   max-width: 540px;
   margin-bottom: 14px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 2;
 }
 
 .about-tags {
@@ -891,13 +905,13 @@ h3 {
 }
 
 .contact {
-  padding-block: 88px;
+  padding-block: 112px;
 }
 
 .contact-card {
   position: relative;
   overflow: hidden;
-  padding: 65px 24px 61px;
+  padding: 82px 24px 78px;
   border-radius: 18px;
   background: var(--green);
   color: white;
@@ -978,7 +992,7 @@ h3 {
 
 .footer-inner {
   display: grid;
-  min-height: 83px;
+  min-height: 100px;
   grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 27px;
@@ -1064,7 +1078,7 @@ h3 {
 
 @media (max-width: 820px) {
   .container {
-    width: min(100% - 48px, 680px);
+    width: min(100% - 56px, 720px);
   }
 
   .navigation {
@@ -1131,12 +1145,12 @@ h3 {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr 0.84fr;
-    gap: 20px;
-    padding-block: 75px 74px;
+    gap: 32px;
+    padding-block: 92px 96px;
   }
 
   .hero h1 {
-    font-size: clamp(39px, 6vw, 53px);
+    font-size: clamp(38px, 5vw, 48px);
   }
 
   .hero-art {
@@ -1145,15 +1159,15 @@ h3 {
   }
 
   .section-pad {
-    padding-block: 77px;
+    padding-block: 94px;
   }
 
   .project-grid {
-    gap: 16px;
+    gap: 22px;
   }
 
   .project-art {
-    height: 220px;
+    height: 245px;
   }
 
   .project-info h3 {
@@ -1166,7 +1180,7 @@ h3 {
 
   .about-inner {
     grid-template-columns: 0.7fr 1.3fr;
-    gap: 36px;
+    gap: 55px;
   }
 
   .footer-inner {
@@ -1180,7 +1194,7 @@ h3 {
   }
 
   .container {
-    width: calc(100% - 40px);
+    width: calc(100% - 44px);
   }
 
   .navigation {
@@ -1190,7 +1204,7 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     gap: 5px;
-    padding-block: 64px 43px;
+    padding-block: 78px 62px;
   }
 
   .hero-copy {
@@ -1204,13 +1218,13 @@ h3 {
   }
 
   .hero h1 {
-    margin-bottom: 16px;
-    font-size: clamp(43px, 10.4vw, 58px);
+    margin-bottom: 22px;
+    font-size: clamp(36px, 9.2vw, 47px);
   }
 
   .hero-description {
     max-width: 440px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .hero-note {
@@ -1224,14 +1238,14 @@ h3 {
   }
 
   .section-pad {
-    padding-block: 63px;
+    padding-block: 80px;
   }
 
   .section-heading {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 26px;
+    margin-bottom: 36px;
   }
 
   .section-heading h2 {
@@ -1244,11 +1258,11 @@ h3 {
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 27px;
+    gap: 38px;
   }
 
   .project-art {
-    height: 250px;
+    height: 280px;
   }
 
   .project-window {
@@ -1257,7 +1271,7 @@ h3 {
 
   .about-inner {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 28px;
   }
 
   .about-decoration {
@@ -1293,11 +1307,11 @@ h3 {
   }
 
   .contact {
-    padding-block: 58px;
+    padding-block: 78px;
   }
 
   .contact-card {
-    padding: 57px 15px 49px;
+    padding: 72px 18px 64px;
   }
 
   .contact-card h2 {
