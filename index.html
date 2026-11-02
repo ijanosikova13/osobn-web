@@ -3,33 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Osobné portfólio — vyberte si z projektov a ozvite sa mi.">
+  <title>Alex — dizajn s dobrým nápadom</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Hlavná navigácia">
+      <a class="wordmark" href="#domov" aria-label="Alex — na úvodnú stránku">
+        <span class="wordmark-mark" aria-hidden="true">a.</span>
+        <span>alex<span class="wordmark-dot">.</span></span>
+      </a>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-links" aria-label="Otvoriť menu">
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+      <div class="navigation-links" id="navigation-links">
+        <a href="#projekty">Projekty</a>
+        <a href="#o-mne">O mne</a>
+        <a class="navigation-contact" href="#kontakt">Napíš mi <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+  <main>
+    <section class="hero container" id="domov" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Dizajn, ktorý dáva zmysel</p>
+        <h1 id="hero-title">Ahoj, som Alex.<br>Robím veci <span class="highlight">s nápadom.</span></h1>
+        <p class="hero-description">Premieňam dobré nápady na premyslené digitálne zážitky. Verím v jednoduchý dizajn, ktorý ľuďom spríjemní deň.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projekty">Pozrieť projekty <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#o-mne">Viac o mne <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-note">
+          <span class="note-star" aria-hidden="true">✳</span>
+          <span>Priestor na novú spoluprácu</span>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Farebná ilustrácia kreatívneho pracovného stola" role="img">
+        <div class="art-sun"></div>
+        <div class="art-card art-card-back">
+          <span class="art-card-label">nápady na každý deň</span>
+          <span class="art-doodle" aria-hidden="true">✳</span>
+        </div>
+        <div class="art-card art-card-front">
+          <span class="art-small-label">MALÉ KROKY, VEĽKÉ VECI</span>
+          <span class="art-big-type">Tvorím<br>s radosťou<span>.</span></span>
+          <span class="art-card-footer"><span class="art-mini-dot"></span> Nový projekt už čoskoro</span>
+        </div>
+        <span class="art-sparkle sparkle-one" aria-hidden="true">✳</span>
+        <span class="art-sparkle sparkle-two" aria-hidden="true">✦</span>
+        <span class="art-squiggle" aria-hidden="true">〰</span>
+      </div>
+    </section>
+
+    <section class="projects section-pad" id="projekty" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Výber z mojej tvorby <span class="heading-star" aria-hidden="true">✳</span></p>
+            <h2 id="projects-title">Projekty <span class="muted-heading">s príbehom.</span></h2>
+          </div>
+          <p>Každý projekt sa začína zvedavou otázkou a končí niečím, na čo môžeme byť hrdí.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-art project-art-peach" aria-hidden="true">
+              <div class="project-window">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <div class="cafe-header">dobré<br><span>ráno.</span></div>
+                <div class="cafe-cup"><span></span></div>
+                <div class="cafe-caption">káva • koláč • pohoda</div>
+              </div>
+              <span class="art-label">01 / identita</span>
+            </div>
+            <div class="project-info">
+              <div><h3>Dobré ráno</h3><p>Vizuálna identita malej kaviarne</p></div>
+              <a class="project-arrow" href="#kontakt" aria-label="Napíš mi o projekte Dobré ráno">↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art project-art-mint" aria-hidden="true">
+              <div class="plant-poster">
+                <span class="poster-kicker">POMALY A S LÁSKOU</span>
+                <span class="poster-title">Vypestuj<br>si radosť<span>.</span></span>
+                <span class="poster-leaf leaf-one"></span>
+                <span class="poster-leaf leaf-two"></span>
+                <span class="poster-leaf leaf-three"></span>
+              </div>
+              <span class="art-label">02 / plagát</span>
+            </div>
+            <div class="project-info">
+              <div><h3>Malá záhrada</h3><p>Plagát pre komunitný projekt</p></div>
+              <a class="project-arrow" href="#kontakt" aria-label="Napíš mi o projekte Malá záhrada">↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art project-art-sage" aria-hidden="true">
+              <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <span class="phone-greeting">Tvoj deň,<br>tvoje tempo.</span>
+                <span class="phone-subtitle">Čo dnes potrebuješ?</span>
+                <span class="phone-option"><i>☀</i> Trochu pokoja <b>→</b></span>
+                <span class="phone-option"><i>♡</i> Dobrý návyk <b>→</b></span>
+              </div>
+              <span class="art-label">03 / digitál</span>
+            </div>
+            <div class="project-info">
+              <div><h3>Malé pauzy</h3><p>Návrh aplikácie pre každodennú pohodu</p></div>
+              <a class="project-arrow" href="#kontakt" aria-label="Napíš mi o projekte Malé pauzy">↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="o-mne" aria-labelledby="about-title">
+      <div class="about-inner container">
+        <div class="about-decoration reveal" aria-hidden="true">
+          <div class="about-sticker"><span>dobré<br>nápady<br><b>rastú ♡</b></span></div>
+          <span class="about-asterisk">✳</span>
+          <span class="about-doodle">↗</span>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Trochu aj mimo obrazovky</p>
+          <h2 id="about-title">Hľadám krásu<br>v <span class="highlight">obyčajných veciach.</span></h2>
+          <p>Najlepšie nápady často prídu pri káve, na prechádzke alebo v rozhovore s niekým novým. V tvorbe ma baví spájať zvedavosť, farby a cit pre detail — a pritom nezabudnúť, pre koho to celé robím.</p>
+          <p>Keď práve netvorím, pravdepodobne ma nájdeš vonku, pri dobrej knihe alebo pri niečom, čo skúšam prvýkrát.</p>
+          <div class="about-tags"><span>☀ Kreativita</span><span>✿ Detail</span><span>♡ Ľudskosť</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact container" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-card reveal">
+        <span class="contact-sparkle" aria-hidden="true">✳</span>
+        <p class="eyebrow">Máš nápad? Poďme na to!</p>
+        <h2 id="contact-title">Spolu vytvoríme<br><span>niečo pekné.</span></h2>
+        <a class="button button-light" href="mailto:ahoj@mojeportfolio.sk">ahoj@mojeportfolio.sk <span aria-hidden="true">↗</span></a>
+        <span class="contact-note">Ozvem sa späť. Sľubujem! ☺</span>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <a class="wordmark footer-wordmark" href="#domov"><span class="wordmark-mark" aria-hidden="true">a.</span><span>alex<span class="wordmark-dot">.</span></span></a>
+      <p>Vytvorené s <span aria-label="láskou">♡</span> a dobrou kávou.</p>
+      <a class="back-to-top" href="#domov">Späť na začiatok ↑</a>
+      <span class="copyright">© <span id="current-year">2026</span> Alex</span>
+    </div>
+  </footer>
 </body>
 </html>
