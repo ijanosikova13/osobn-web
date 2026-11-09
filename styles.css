@@ -208,17 +208,6 @@ h3 {
   line-height: 1.11;
 }
 
-.hero h1::before {
-  position: absolute;
-  z-index: -1;
-  inset: -18px -20px;
-  border-radius: 25px;
-  background:
-    linear-gradient(rgba(248, 246, 240, 0.76), rgba(248, 246, 240, 0.76)),
-    url("img/filip-kvasnak-2xGmnkhF5rE-unsplash.jpg") center 48% / cover;
-  content: "";
-}
-
 .highlight {
   position: relative;
   z-index: 0;
@@ -314,11 +303,22 @@ h3 {
 
 .hero-art::before {
   position: absolute;
-  width: clamp(230px, 75%, 340px);
+  width: clamp(250px, 80%, 360px);
   aspect-ratio: 1;
   border-radius: 44% 56% 61% 39% / 49% 44% 56% 51%;
   background: var(--mint);
   content: "";
+  transform: rotate(-12deg);
+}
+
+.hero-photo {
+  position: absolute;
+  z-index: 0;
+  width: clamp(230px, 75%, 340px);
+  aspect-ratio: 1;
+  border-radius: 44% 56% 61% 39% / 49% 44% 56% 51%;
+  object-fit: cover;
+  object-position: center;
   transform: rotate(-12deg);
 }
 
@@ -470,7 +470,7 @@ h3 {
   background: #e6aaa0;
 }
 
-.cafe-header {
+.camp-header {
   z-index: 1;
   color: var(--ink);
   font-family: var(--font-heading);
@@ -480,45 +480,53 @@ h3 {
   line-height: 0.98;
 }
 
-.cafe-header span {
+.camp-header span {
   color: var(--green);
 }
 
-.cafe-cup {
+.camp-landscape {
   position: absolute;
-  top: 61px;
-  right: 22px;
-  width: 60px;
-  height: 54px;
-  border: 5px solid var(--peach);
-  border-top: 0;
-  border-radius: 4px 4px 24px 24px;
-  transform: rotate(12deg);
+  top: 58px;
+  right: 20px;
+  width: 70px;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #d7eee3;
 }
 
-.cafe-cup::after {
+.camp-landscape::before {
   position: absolute;
-  top: 3px;
-  right: -17px;
-  width: 16px;
-  height: 20px;
-  border: 4px solid var(--peach);
-  border-left: 0;
-  border-radius: 0 12px 12px 0;
+  top: 9px;
+  right: 11px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--peach);
   content: "";
 }
 
-.cafe-cup span {
+.camp-landscape span,
+.camp-landscape::after {
   position: absolute;
-  top: -3px;
-  left: -5px;
-  width: 60px;
-  height: 5px;
+  bottom: -34px;
+  width: 66px;
+  height: 60px;
   border-radius: 50%;
-  background: var(--peach);
+  content: "";
 }
 
-.cafe-caption {
+.camp-landscape span {
+  left: -13px;
+  background: var(--sage);
+}
+
+.camp-landscape::after {
+  right: -14px;
+  background: var(--green);
+}
+
+.camp-caption {
   position: absolute;
   right: 0;
   bottom: 17px;
@@ -554,6 +562,40 @@ h3 {
 
 .project-card:hover .plant-poster {
   transform: rotate(0) translateY(-4px);
+}
+
+.shirt-mockup {
+  position: relative;
+  display: grid;
+  width: 150px;
+  height: 180px;
+  place-items: center;
+  filter: drop-shadow(0 15px 20px rgba(38, 61, 54, 0.16));
+  transition: transform 350ms ease;
+}
+
+.shirt-mockup::before {
+  position: absolute;
+  inset: 0;
+  background: #fffefa;
+  clip-path: polygon(25% 0, 40% 8%, 60% 8%, 75% 0, 100% 20%, 82% 41%, 72% 34%, 74% 100%, 26% 100%, 28% 34%, 18% 41%, 0 20%);
+  content: "";
+}
+
+.project-card:hover .shirt-mockup {
+  transform: translateY(-4px) rotate(-2deg);
+}
+
+.shirt-print {
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--peach);
+  color: var(--green-dark);
+  font-size: 26px;
 }
 
 .poster-kicker {
@@ -604,80 +646,6 @@ h3 {
   right: 25px;
   bottom: -34px;
   transform: rotate(65deg);
-}
-
-.phone-mockup {
-  position: relative;
-  display: flex;
-  width: 168px;
-  height: 207px;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 32px 13px 12px;
-  border: 5px solid #fffefa;
-  border-radius: 21px;
-  background: #f5faf4;
-  box-shadow: 0 15px 32px rgba(38, 61, 54, 0.15);
-  transform: rotate(-4deg);
-  transition: transform 350ms ease;
-}
-
-.project-card:hover .phone-mockup {
-  transform: rotate(-1deg) translateY(-4px);
-}
-
-.phone-notch {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  width: 42px;
-  height: 5px;
-  border-radius: 5px;
-  background: #e3ebe3;
-  transform: translateX(-50%);
-}
-
-.phone-greeting {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 1.05;
-}
-
-.phone-subtitle {
-  margin: 4px 0 11px;
-  color: var(--muted);
-  font-size: 7px;
-}
-
-.phone-option {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 6px;
-  padding: 8px 7px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: white;
-  font-size: 7px;
-  font-weight: 600;
-}
-
-.phone-option i {
-  color: #c48e48;
-  font-size: 12px;
-  font-style: normal;
-}
-
-.phone-option:nth-of-type(5) i {
-  color: var(--green);
-}
-
-.phone-option b {
-  margin-left: auto;
-  color: var(--sage);
-  font-size: 11px;
 }
 
 .project-info {
@@ -735,7 +703,7 @@ h3 {
 .about-decoration {
   position: relative;
   display: grid;
-  min-height: 318px;
+  min-height: 340px;
   place-items: center;
 }
 
@@ -748,33 +716,16 @@ h3 {
   content: "";
 }
 
-.about-sticker {
+.about-photo {
+  position: relative;
   z-index: 1;
-  display: grid;
-  width: 174px;
-  height: 185px;
-  place-items: center;
-  border-radius: 49% 51% 47% 53% / 53% 44% 56% 47%;
-  background: var(--peach);
-  box-shadow: 0 19px 36px rgba(116, 94, 58, 0.12);
-  color: var(--green-dark);
-  transform: rotate(-9deg);
-  animation: float-shape 8s ease-in-out infinite;
-}
-
-.about-sticker span {
-  font-family: var(--font-heading);
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 1.02;
-  text-align: center;
-  transform: rotate(9deg);
-}
-
-.about-sticker b {
-  color: var(--green);
-  font-size: 20px;
+  display: block;
+  width: min(250px, 100%);
+  aspect-ratio: 3 / 4;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 42%;
+  box-shadow: 0 19px 36px rgba(38, 61, 54, 0.16);
 }
 
 .about-asterisk {
@@ -1199,7 +1150,8 @@ h3 {
   }
 
   .about-decoration {
-    min-height: 250px;
+    min-height: 0;
+    padding-block: 4px 12px;
   }
 
   .about-decoration::before {
@@ -1207,13 +1159,8 @@ h3 {
     height: 215px;
   }
 
-  .about-sticker {
-    width: 148px;
-    height: 158px;
-  }
-
-  .about-sticker span {
-    font-size: 22px;
+  .about-photo {
+    width: min(220px, 74vw);
   }
 
   .about-asterisk {
