@@ -311,6 +311,16 @@ h3 {
   transform: rotate(-12deg);
 }
 
+.hero-botanical {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: clamp(190px, 60%, 260px);
+  height: auto;
+  pointer-events: none;
+}
+
 .hero-photo {
   position: absolute;
   z-index: 0;
@@ -367,6 +377,23 @@ h3 {
   font-weight: 800;
   letter-spacing: -0.075em;
   line-height: 1.18;
+}
+
+.section-title-icon {
+  display: inline-grid;
+  width: 31px;
+  height: 31px;
+  margin-right: 7px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(195, 252, 226, 0.72);
+  color: var(--green);
+  vertical-align: 0.12em;
+}
+
+.section-title-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .muted-heading {
@@ -829,8 +856,13 @@ h3 {
   line-height: 1.12;
 }
 
-.contact-card h2 span {
+.contact-card h2 > span:not(.section-title-icon) {
   color: var(--peach);
+}
+
+.contact-card .section-title-icon {
+  background: rgba(195, 252, 226, 0.16);
+  color: var(--mint);
 }
 
 .button-light {
